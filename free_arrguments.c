@@ -9,7 +9,6 @@ void free_arrguements(char **arrguments)
 
 		for (i = 0; arrguments[i]; i++)
 		{
-			printf("%s\n", arrguments[i]);
 			free(arrguments[i]);
 			arguments[i] = NULL;
 		}

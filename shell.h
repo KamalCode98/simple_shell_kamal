@@ -26,4 +26,7 @@ char *_strchr(char *str, char c);
 char *_strdup(char *str);
 int _putchar(char c);
 
+/*--- Memory ---*/
+void free_arrguements(char **arrguments)
+
 #endif
