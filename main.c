@@ -35,6 +35,8 @@ int main(int ac, char **argv)
 
 		for (i = 0; command[i]; i++)
 			printf("%s\n", command[i]);
+			free(command[i]);
+			command[i] = NULL;
 
 
 
