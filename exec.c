@@ -25,6 +25,4 @@ int _execute(char **command, char **argv)
     }
 
     return(WEXITSTATUS(status));
-
-
 }

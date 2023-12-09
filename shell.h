@@ -13,7 +13,7 @@
 /* Delimiters global var*/
 #define DELIM " \t\n"
 /* Global Declaration for environ*/
-extern char **environ
+extern char **environ;
 
 
 /*---  prompt ----*/
