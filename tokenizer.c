@@ -1,8 +1,12 @@
 #include "shell.h"
 /**
+ * tokenizer - Tokenizes a line into an array of strings
  *
+ * @line: Input line to be tokenized
  *
- *
+ * Returns:
+ *   - An array of strings containing the tokens
+ *   - NULL if an error occurs or if the input line is NULL
  */
 
 char **tokenizer(char *line)
@@ -26,6 +30,7 @@ char **tokenizer(char *line)
 	free(copy);
 	copy = NULL;
 
+	/* Allocate memory for the array of strings to store the tokens */
 	command = malloc (sizeof(char*) * (cpt + 1));
 	if(!command)
 	{
@@ -33,17 +38,22 @@ char **tokenizer(char *line)
 		return (NULL);
 	}
 
+	/* Tokenize the original input line and store the tokens in the array */
 	token = strtok(line, DELIM);
 
         while(token)
         {
-                command[i] = _strdup(token);
-                token = strtok(NULL, DELIM);
-		i++;
+			/* Duplicate each token and store it in the array */
+            command[i] = _strdup(token);
+            token = strtok(NULL, DELIM);
+			i++;
         }
+		
+	/* Free the original input line*/
 	free(line);
 	line = NULL;
 	command[i] = NULL;
+
 	return(command);
 
 }
