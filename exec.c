@@ -1,9 +1,13 @@
 #include "shell.h"
-/*
-*
-*
-*
-*/
+/**
+ * _execute - Executes a command in a child process
+ *
+ * @command: Array of strings containing the command and its arguments
+ * @argv: Array of strings containing the program name and its arguments
+ *
+ * Returns:
+ *   - The exit status of the executed command
+ */
 int _execute(char **command, char **argv)
 {
     pid_t child_process;
