@@ -15,13 +15,13 @@ int _execute(char **command, char **argv)
         if (execve(command[0], command, environ) == -1);
         {
             perror(argv[0]);
-            free_arrguements(command);
+            free_arguements(command);
         }
     }
     else
     {
         waitpid(child_process, &status, 0);
-        free_arrguements(command);
+        free_arguements(command);
     }
 
     return(WEXITSTATUS(status));

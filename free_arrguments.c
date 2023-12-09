@@ -1,18 +1,26 @@
 #include "shell.h"
-
-void free_arrguements(char **arrguments)
+/**
+ * free_arguments - Frees the memory allocated for an array of arguments
+ *
+ * @arguments: Array of arguments to be freed
+ */
+void free_arguements(char **arguments)
 {
     int i;
-
-	if (!arrguments)
+	/* Check if the array is NULL to avoid dereferencing a NULL pointer */
+	if (!arguments)
 			return;
-
-		for (i = 0; arrguments[i]; i++)
+		/* Iterate through the array of arguments */
+		for (i = 0; arguments[i]; i++)
 		{
-			free(arrguments[i]);
+			/*  Free the memory allocated for each argument */
+			free(arguments[i]);
+			/* Set the pointer to NULL after freeing to avoid dangling pointers */
 			arguments[i] = NULL;
 		}
         
+		/* Free the memory allocated for the array of arguments */
 		free(arguments);
+		/* Set the pointer to NULL after freeing to avoid dangling pointers*/
 		arguments = NULL;
 }
