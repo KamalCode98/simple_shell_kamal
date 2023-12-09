@@ -40,6 +40,7 @@ int main(int ac, char **argv)
 			command[i] = NULL;
 		}
 		free(command);
+		command = NULL;
 
 		//status = _execute(command, argv);
 	}
