@@ -14,6 +14,7 @@ int main(int ac, char **argv)
 	char *line = NULL;
 	char **command = NULL;
 	int status;
+	int i;
 	(void) ac;
 	(void)argv;
 
@@ -29,6 +30,13 @@ int main(int ac, char **argv)
 
 
 		command = tokenizer(line);
+		if (!command)
+			continue;
+
+		for (i = 0, command[i]; i+++)
+			printf("%s\n", command[i]);
+
+
 
 		//status = _execute(command, argv);
 	}
