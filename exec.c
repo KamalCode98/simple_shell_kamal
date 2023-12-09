@@ -22,8 +22,9 @@ int _execute(char **command, char **argv)
     {
         waitpid(child_process, &status, 0);
         free_arrguements(command);
-
     }
+
+    return(WEXITSTATUS(status));
 
 
 }
