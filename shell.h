@@ -12,12 +12,16 @@
 
 /* Delimiters global var*/
 #define DELIM " \t\n"
+/* Global Declaration for environ*/
+extern char **environ
 
-/*--- Reading prompt functions----*/
+
+/*---  prompt ----*/
 char *read_line(void);
 char **tokenizer(char *line);
+int _execute(char **command, char **argv);
 
-/*--- Strings functions --- */
+/*--- Strings  --- */
 char *_strcpy(char *dest, char *source);
 char *_strcat(char *first, char *second);
 int _strlen(char *str);
@@ -26,7 +30,7 @@ char *_strchr(char *str, char c);
 char *_strdup(char *str);
 int _putchar(char c);
 
-/*--- Memory ---*/
+/*--- Memory  ---*/
 void free_arrguements(char **arrguments)
 
 #endif
