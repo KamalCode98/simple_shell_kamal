@@ -14,6 +14,7 @@ int main(int ac, char **argv)
 	char *line = NULL;
 	char **command = NULL;
 	int status;
+	int i;
 	(void) ac;
 	(void)argv;
 
@@ -32,7 +33,7 @@ int main(int ac, char **argv)
 		if (!command)
 			continue;
 
-		for (i = 0, command[i]; i++)
+		for (i = 0; command[i]; i++)
 			printf("%s\n", command[i]);
 
 
