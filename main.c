@@ -32,7 +32,8 @@ int main(int ac, char **argv)
 		if (!command)
 			continue;
 
-		for (i = 0; command[i]; i++)
+		for (i = 0, command[i]; i++)
+>>>>>>> 8c2739899bae3cbefe350220616a46d18c353efa
 			printf("%s\n", command[i]);
 
 
