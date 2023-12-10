@@ -31,6 +31,6 @@ char *_strdup(char *str);
 int _putchar(char c);
 
 /*--- Memory  ---*/
-void free_arguements(char **arguments)
+void free_arguements(char **arguments);
 
 #endif
