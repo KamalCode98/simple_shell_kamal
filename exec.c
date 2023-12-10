@@ -20,7 +20,7 @@ int _execute(char **command, char **argv)
         {
             perror(argv[0]);
             free_arguements(command);
-            exit(0);
+            exit(127);
         }
     }
     else
